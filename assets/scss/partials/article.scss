@@ -83,6 +83,17 @@
     }
 }
 
+.article-summary {
+    font-weight: normal;
+    color: var(--card-text-color-secondary);
+    line-height: 1.2;
+    margin: 0;
+    font-size: 1rem;
+    @include respond(xl) {
+        font-size: 1.5rem;
+    }
+}
+
 .article-title-wrapper {
     display: flex;
     flex-direction: column;
