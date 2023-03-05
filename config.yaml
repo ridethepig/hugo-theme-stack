@@ -5,14 +5,13 @@ module:
 
 params:
     mainSections:
-        - post
+        - blog
     featuredImageField: image
     rssFullContent: true
-    favicon:
-
+    favicon: /favicon.jpg
     footer:
-        since:
-        customText:
+        since: 2018
+        customText: 摸摸猫猫
 
     dateFormat:
         published: Jan 02, 2006
@@ -21,18 +20,18 @@ params:
     sidebar:
         compact: false
         emoji:
-        subtitle:
+        subtitle: "摸摸！"
         avatar:
             enabled: true
             local: true
-            src: img/avatar.png
+            src: img/avatar.jpg
 
     article:
-        math: false
+        math: true
         toc: true
         readingTime: true
         license:
-            enabled: false
+            enabled: true
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
@@ -112,8 +111,19 @@ params:
             id:
 
     widgets:
-        homepage: []
-        page: []
+        homepage:
+            - type: search
+            - type: archives
+              params:
+                  limit: 5
+            - type: categories
+              params:
+                  limit: 10
+            - type: tag-cloud
+              params:
+                  limit: 10
+        page:
+            - type: toc
 
     opengraph:
         twitter:
